@@ -9,7 +9,7 @@ public class BubbleManage : MonoBehaviour
     public float bubbleSpawnTimer;
     private void Start()
     {
-        bubbleSpawnTimer = 2.0f;
+        bubbleSpawnTimer = 0.3f;
     }
 
     private void Update()
@@ -18,7 +18,7 @@ public class BubbleManage : MonoBehaviour
         if(bubbleSpawnTimer < 0)
         {
             SpawnBubble();
-            bubbleSpawnTimer = 2.0f;
+            bubbleSpawnTimer = 0.3f;
         }
     }
 
