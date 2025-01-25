@@ -150,7 +150,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 8948159556863084456}
   bullet: {fileID: 3217789853876344437, guid: f9418a725cfe30844b9931c7c06bd783, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 1
+  firstShootingSpeed: 0.5
 --- !u!58 &2507131714901767687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 6674621109555799536}
   bullet: {fileID: 7729578511116493892, guid: bc619298bcdd663479696f05d971a7cc, type: 3}
   nearestBaloon: {fileID: 7729578511116493892, guid: bc619298bcdd663479696f05d971a7cc, type: 3}
-  firstShootingSpeed: 0.2
+  firstShootingSpeed: 5
 --- !u!58 &2670560888999105594
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 7324488613720060845}
   bullet: {fileID: 3217789853876344437, guid: f9418a725cfe30844b9931c7c06bd783, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 2
+  firstShootingSpeed: 0.7
 --- !u!58 &7806610642085656202
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1267,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5591927572455289369
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 5924661378498510793}
   bullet: {fileID: 7464002907999898100, guid: bb97a8d1bbedf2d4e9fe5ec683f40dfc, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 5
+  firstShootingSpeed: 3
 --- !u!58 &2844080756357015075
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1451,11 +1451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd48d43085028541a5043c433c00c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSpeed: 0
+  shootingSpeed: 6
   shootingPlace: {fileID: 1076912422489097199}
   bullet: {fileID: 7729578511116493892, guid: bc619298bcdd663479696f05d971a7cc, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 1
+  firstShootingSpeed: 7
 --- !u!58 &7451440447096552024
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 148672289731791622}
   bullet: {fileID: 7729578511116493892, guid: bc619298bcdd663479696f05d971a7cc, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 0.5
+  firstShootingSpeed: 6
 --- !u!58 &645684064789275560
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2691,7 +2691,7 @@ MonoBehaviour:
   shootingPlace: {fileID: 6488285432158533683}
   bullet: {fileID: 3217789853876344437, guid: f9418a725cfe30844b9931c7c06bd783, type: 3}
   nearestBaloon: {fileID: 0}
-  firstShootingSpeed: 3
+  firstShootingSpeed: 1
 --- !u!58 &5464067740216231833
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public float lifeTime;
     public Scores scores;
+    public int whichBullet;
     private void Start()
     {
         lifeTime = 7.0f;
@@ -16,7 +17,7 @@ public class Bullet : MonoBehaviour
     {
         this.transform.Translate(Vector3.up / 1.5f);
         lifeTime -= Time.deltaTime;
-        if(lifeTime <= 0)
+        if (lifeTime <= 0)
         {
             Destroy(this.gameObject);
         }
@@ -25,15 +26,41 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Bubble1")
         {
-            scores.scoresCounter += 20;
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+            if (whichBullet == 1)
+            {
+                Destroy(collision.gameObject);
+                scores.scoresCounter += 20;
+            }
+            if (whichBullet == 0)
+            {
+
+                Destroy(collision.gameObject);
+                Destroy(this.gameObject);
+                scores.scoresCounter += 20;
+            }
+            if (whichBullet == 2)
+            {
+                collision.GetComponent<Bubble>().canSLow = true;
+            }
         }
         if (collision.tag == "Bubble2")
         {
-            scores.scoresCounter += 20;
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+            if (whichBullet == 1)
+            {
+                Destroy(collision.gameObject);
+                scores.scoresCounter += 20;
+            }
+            if (whichBullet == 0)
+            {
+
+                Destroy(collision.gameObject);
+                Destroy(this.gameObject);
+                scores.scoresCounter += 20;
+            }
+            if (whichBullet == 2)
+            {
+                collision.GetComponent<Bubble>().canSLow = true;
+            }
         }
     }
 }

@@ -102,6 +102,7 @@ MonoBehaviour:
   rb: {fileID: 6105967230591306249}
   lifeTime: 0
   scores: {fileID: 0}
+  whichBullet: 0
 --- !u!50 &6105967230591306249
 Rigidbody2D:
   serializedVersion: 4
