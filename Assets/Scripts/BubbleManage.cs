@@ -13,6 +13,7 @@ public class BubbleManage : MonoBehaviour
     public float bubbleMinusMultiplier;
     private void Start()
     {
+        baseBubbleSpawnTimer = 5.0f;
         bubbleSpawnTimer = baseBubbleSpawnTimer;
     }
 

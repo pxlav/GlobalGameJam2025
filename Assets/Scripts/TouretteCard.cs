@@ -10,6 +10,12 @@ public class TouretteCard : MonoBehaviour
     public Tower tower;
     public float firstY;
     public float highLightY;
+    public int whichCard; // 0 - 100; 1 - 150; 2 - 200
+    public Scores scores;
+    private void Start()
+    {
+        transform.position = new Vector3(this.transform.position.x, firstY, this.transform.position.z);
+    }
 
     private void OnMouseDown()
     {
@@ -35,9 +41,30 @@ public class TouretteCard : MonoBehaviour
             tower = collision.gameObject.GetComponent<Tower>();
             if (tower.whichClass == 0)
             {
-                tower.whichClass = cardClass;
-                tower.isChanging = true;
-                isDragging = false;
+                if (whichCard == 0 && scores.scoresCounter >= 100)
+                {
+                    tower.whichClass = cardClass;
+                    tower.isChanging = true;
+                    isDragging = false;
+                    isDragging = false;
+                    scores.scoresCounter -= 100;
+                }
+                if (whichCard == 0 && scores.scoresCounter >= 150)
+                {
+                    tower.whichClass = cardClass;
+                    tower.isChanging = true;
+                    isDragging = false;
+                    isDragging = false;
+                    scores.scoresCounter -= 150;
+                }
+                if (whichCard == 0 && scores.scoresCounter >= 200)
+                {
+                    tower.whichClass = cardClass;
+                    tower.isChanging = true;
+                    isDragging = false;
+                    isDragging = false;
+                    scores.scoresCounter -= 200;
+                }
             }
         }
     }
@@ -47,6 +74,6 @@ public class TouretteCard : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        transform.position = new Vector3(this.transform.position.x, firstY, this.transform.position.z);
+            transform.position = new Vector3(this.transform.position.x, firstY, this.transform.position.z);
     }
 }

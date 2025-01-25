@@ -10,9 +10,8 @@ public class Scores : MonoBehaviour
 
     private void Start()
     {
-        scoresCounter = 999;
+        scoresCounter = 100;
     }
-
     private void Update()
     {
         scoresText.text = scoresCounter.ToString();
