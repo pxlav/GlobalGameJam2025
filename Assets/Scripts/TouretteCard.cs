@@ -49,7 +49,7 @@ public class TouretteCard : MonoBehaviour
                     isDragging = false;
                     scores.scoresCounter -= 100;
                 }
-                if (whichCard == 0 && scores.scoresCounter >= 150)
+                if (whichCard == 1 && scores.scoresCounter >= 150)
                 {
                     tower.whichClass = cardClass;
                     tower.isChanging = true;
@@ -57,7 +57,7 @@ public class TouretteCard : MonoBehaviour
                     isDragging = false;
                     scores.scoresCounter -= 150;
                 }
-                if (whichCard == 0 && scores.scoresCounter >= 200)
+                if (whichCard == 2 && scores.scoresCounter >= 200)
                 {
                     tower.whichClass = cardClass;
                     tower.isChanging = true;
