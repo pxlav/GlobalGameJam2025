@@ -15,6 +15,11 @@ public class Tower : MonoBehaviour
     public float changingTimer;
     public bool isChanging;
     public GameObject skillsObj;
+    public Scores scores;
+    public Animator state1Animator;
+    public Animator state2Animator;
+    public Animator state3Animator;
+    public TouretteShooting touretteShooting;
 
     private void Start()
     {
@@ -111,18 +116,42 @@ public class Tower : MonoBehaviour
             skillsWindowsOff[0].SetActive(false);
             skillsWindowsOff[1].SetActive(true);
             skillsWindowsOff[2].SetActive(true);
+            if(touretteShooting.nearestBaloon != null)
+            {
+                state1Animator.Play("attack");
+            }
+            else
+            {
+                state1Animator.Play("idle");
+            }
         }
         if (whichState == 2)
         {
             skillsWindowsOff[0].SetActive(false);
             skillsWindowsOff[1].SetActive(false);
             skillsWindowsOff[2].SetActive(true);
+            if (touretteShooting.nearestBaloon != null)
+            {
+                state2Animator.Play("attack");
+            }
+            else
+            {
+                state2Animator.Play("idle");
+            }
         }
         if (whichState == 3)
         {
             skillsWindowsOff[0].SetActive(false);
             skillsWindowsOff[1].SetActive(false);
             skillsWindowsOff[2].SetActive(false);
+            if (touretteShooting.nearestBaloon != null)
+            {
+                state3Animator.Play("attack");
+            }
+            else
+            {
+                state3Animator.Play("idle");
+            }
         }
     }
 }

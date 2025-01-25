@@ -9,10 +9,7 @@ public class TouretteShooting : MonoBehaviour
     public Transform shootingPlace;
     public GameObject bullet;
     public GameObject nearestBaloon;
-    private void Start()
-    {
-        shootingSpeed = 0.3f;
-    }
+    public float firstShootingSpeed;
     private void Update()
     {
         if (nearestBaloon != null)
@@ -25,6 +22,7 @@ public class TouretteShooting : MonoBehaviour
             {
                 Instantiate(bullet, shootingPlace.transform.position, shootingPlace.transform.rotation);
                 shootingSpeed = 0.3f;
+                shootingSpeed = firstShootingSpeed;
             }
         }
     }

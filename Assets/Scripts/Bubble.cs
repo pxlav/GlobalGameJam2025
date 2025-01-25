@@ -38,10 +38,5 @@ public class Bubble : MonoBehaviour
         {
             currentTarget++;
         }
-        if(collision.tag == "Bullet")
-        {
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
-        }
     }
 }

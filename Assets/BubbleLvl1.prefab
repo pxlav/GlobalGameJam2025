@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7920244847595823070}
   m_Layer: 0
   m_Name: BubbleLvl1
-  m_TagString: Untagged
+  m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   currentTarget: 0
   targets: []
   targetsNumber: 0
+  spawnPlace: {fileID: 0}
+  lifeTime: 0
 --- !u!58 &6328005511849478091
 CircleCollider2D:
   m_ObjectHideFlags: 0
