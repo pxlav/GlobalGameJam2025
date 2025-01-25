@@ -8,6 +8,8 @@ public class TouretteCard : MonoBehaviour
     public bool isDragging;
     public Transform rootCard;
     public Tower tower;
+    public float firstY;
+    public float highLightY;
 
     private void OnMouseDown()
     {
@@ -20,7 +22,7 @@ public class TouretteCard : MonoBehaviour
     }
     private void Update()
     {
-        if(isDragging)
+        if (isDragging)
         {
             Vector2 MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(MousePosition);
@@ -28,15 +30,23 @@ public class TouretteCard : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Tower")
+        if (collision.tag == "Tower")
         {
             tower = collision.gameObject.GetComponent<Tower>();
-            if(tower.whichClass == 0)
+            if (tower.whichClass == 0)
             {
                 tower.whichClass = cardClass;
                 tower.isChanging = true;
                 isDragging = false;
             }
         }
+    }
+    private void OnMouseEnter()
+    {
+        this.transform.position = new Vector3(this.transform.position.x, highLightY, this.transform.position.z);
+    }
+    private void OnMouseExit()
+    {
+        transform.position = new Vector3(this.transform.position.x, firstY, this.transform.position.z);
     }
 }

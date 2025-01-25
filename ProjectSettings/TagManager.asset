@@ -9,7 +9,8 @@ TagManager:
   - Spawn
   - Bullet
   - Scores
-  - Bubble
+  - Bubble1
+  - Bubble2
   layers:
   - Default
   - TransparentFX

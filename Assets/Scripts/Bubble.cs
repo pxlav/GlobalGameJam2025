@@ -16,11 +16,11 @@ public class Bubble : MonoBehaviour
     private void Start()
     {
         speed = 0.1f;
-        targetsNumber = 4;
+        targetsNumber = 30;
         targets.AddRange(GameObject.FindGameObjectsWithTag("Target"));
         spawnPlace = GameObject.FindGameObjectWithTag("Spawn");
         this.transform.position = spawnPlace.transform.position;
-        lifeTime = 12.0f;
+        lifeTime = 150.0f;
     }
     private void Update()
     {

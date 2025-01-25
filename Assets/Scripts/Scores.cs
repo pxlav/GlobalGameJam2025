@@ -8,6 +8,11 @@ public class Scores : MonoBehaviour
     public TextMeshPro scoresText;
     public int scoresCounter;
 
+    private void Start()
+    {
+        scoresCounter = 999;
+    }
+
     private void Update()
     {
         scoresText.text = scoresCounter.ToString();

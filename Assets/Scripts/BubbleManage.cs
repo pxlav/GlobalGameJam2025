@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class BubbleManage : MonoBehaviour
 {
-    public GameObject bubbleObj;
+    public GameObject[] bubbleObj;
     public Transform bubbleSpawnPoint;
     public float bubbleSpawnTimer;
+    public int whichBubble;
+    public float baseBubbleSpawnTimer;
+    public float bubbleTimerMinus;
+    public float bubbleMinusMultiplier;
     private void Start()
     {
-        bubbleSpawnTimer = 0.3f;
+        bubbleSpawnTimer = baseBubbleSpawnTimer;
     }
 
     private void Update()
     {
+        bubbleTimerMinus += Time.deltaTime / bubbleMinusMultiplier;
         bubbleSpawnTimer -= Time.deltaTime;
         if(bubbleSpawnTimer < 0)
         {
+            whichBubble = Random.Range(0, 2);
             SpawnBubble();
-            bubbleSpawnTimer = 0.3f;
+            bubbleSpawnTimer = baseBubbleSpawnTimer - bubbleTimerMinus;
         }
     }
 
     void SpawnBubble()
     {
-        Instantiate(bubbleObj, bubbleSpawnPoint);
+        Instantiate(bubbleObj[whichBubble], bubbleSpawnPoint);
     }
 }

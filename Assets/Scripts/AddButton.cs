@@ -31,7 +31,7 @@ public class AddButton : MonoBehaviour
             currentTower.whichState++;
             currentTower.isChanging = true;
         }
-        if (currentTower.whichState == 2 && scores.scoresCounter >= 300)
+        else if (currentTower.whichState == 2 && scores.scoresCounter >= 300)
         {
             scores.scoresCounter -= 300;
             currentTower.whichState++;

@@ -23,7 +23,13 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bubble")
+        if (collision.tag == "Bubble1")
+        {
+            scores.scoresCounter += 20;
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+        if (collision.tag == "Bubble2")
         {
             scores.scoresCounter += 20;
             Destroy(collision.gameObject);

@@ -101,6 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4274509483838980001}
   lifeTime: 0
+  scores: {fileID: 0}
+  bubbleParticles:
+  - {fileID: 6356864151573237041, guid: 6371d7ba13f59c44e8797f47d8bb553b, type: 3}
+  - {fileID: 8673242336895333821, guid: 9d024b73607796a4b9e5a8e599d25997, type: 3}
 --- !u!50 &4274509483838980001
 Rigidbody2D:
   serializedVersion: 4

@@ -21,7 +21,6 @@ public class TouretteShooting : MonoBehaviour
             if (shootingSpeed <= 0)
             {
                 Instantiate(bullet, shootingPlace.transform.position, shootingPlace.transform.rotation);
-                shootingSpeed = 0.3f;
                 shootingSpeed = firstShootingSpeed;
             }
         }
