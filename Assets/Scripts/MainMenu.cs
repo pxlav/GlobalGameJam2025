@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public float voiceOverTimer;
     public float endTimer;
     public GameObject gameObj;
+    public AudioSource clickSound;
     private void Start()
     {
         menuStates = 0;
@@ -26,6 +27,7 @@ public class MainMenu : MonoBehaviour
             menuObjs[4].SetActive(false);
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                clickSound.Play();
                 menuStates = 1;
             }
         }
@@ -51,6 +53,7 @@ public class MainMenu : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                clickSound.Play();
                 menuStates = 3;
             }
         }
@@ -80,6 +83,7 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         menuStates = 2;
+        clickSound.Play();
     }
     public void ExitButton()
     {

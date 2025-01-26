@@ -8,10 +8,14 @@ public class Bullet : MonoBehaviour
     public float lifeTime;
     public Scores scores;
     public int whichBullet;
+    public AudioSource bubbleSound;
+    public AudioSource moneySound;
     private void Start()
     {
         lifeTime = 7.0f;
         scores = GameObject.FindGameObjectWithTag("Scores").GetComponent<Scores>();
+        bubbleSound = GameObject.FindGameObjectWithTag("BubbleSound").GetComponent<AudioSource>();
+        moneySound = GameObject.FindGameObjectWithTag("MoneySound").GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -26,14 +30,16 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Bubble1")
         {
+            bubbleSound.Play();
             if (whichBullet == 1)
             {
+                moneySound.Play();
                 Destroy(collision.gameObject);
                 scores.scoresCounter += 20;
             }
             if (whichBullet == 0)
             {
-
+                moneySound.Play();
                 Destroy(collision.gameObject);
                 Destroy(this.gameObject);
                 scores.scoresCounter += 20;
@@ -45,14 +51,16 @@ public class Bullet : MonoBehaviour
         }
         if (collision.tag == "Bubble2")
         {
+            bubbleSound.Play();
             if (whichBullet == 1)
             {
+                moneySound.Play();
                 Destroy(collision.gameObject);
                 scores.scoresCounter += 20;
             }
             if (whichBullet == 0)
             {
-
+                moneySound.Play();
                 Destroy(collision.gameObject);
                 Destroy(this.gameObject);
                 scores.scoresCounter += 20;

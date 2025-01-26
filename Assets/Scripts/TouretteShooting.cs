@@ -10,6 +10,12 @@ public class TouretteShooting : MonoBehaviour
     public GameObject bullet;
     public GameObject nearestBaloon;
     public float firstShootingSpeed;
+    public AudioSource shootingSound;
+
+    private void Start()
+    {
+        shootingSound = GameObject.FindGameObjectWithTag("ShootSound").GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (nearestBaloon != null)
@@ -22,6 +28,7 @@ public class TouretteShooting : MonoBehaviour
             {
                 Instantiate(bullet, shootingPlace.transform.position, shootingPlace.transform.rotation);
                 shootingSpeed = firstShootingSpeed;
+                shootingSound.Play();
             }
         }
     }

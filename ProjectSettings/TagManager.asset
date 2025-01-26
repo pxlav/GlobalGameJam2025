@@ -11,6 +11,9 @@ TagManager:
   - Scores
   - Bubble1
   - Bubble2
+  - ShootSound
+  - BubbleSound
+  - MoneySound
   layers:
   - Default
   - TransparentFX

@@ -9,13 +9,6 @@ public class ShootingAnimation : MonoBehaviour
     public TouretteShooting touretteShooting;
     private void Update()
     {
-        if(touretteShooting.nearestBaloon != null)
-        {
-            shootingAnimator.Play(animationClipsNames[1]);
-        }
-        else
-        {
-            shootingAnimator.Play(animationClipsNames[0]);
-        }
+
     }
 }

@@ -12,6 +12,7 @@ public class TouretteCard : MonoBehaviour
     public float highLightY;
     public int whichCard; // 0 - 100; 1 - 150; 2 - 200
     public Scores scores;
+    public AudioSource cardSound;
     private void Start()
     {
         transform.position = new Vector3(this.transform.position.x, firstY, this.transform.position.z);
@@ -71,6 +72,7 @@ public class TouretteCard : MonoBehaviour
     private void OnMouseEnter()
     {
         this.transform.position = new Vector3(this.transform.position.x, highLightY, this.transform.position.z);
+        cardSound.Play();
     }
     private void OnMouseExit()
     {
