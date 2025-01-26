@@ -10,7 +10,7 @@ public class Scores : MonoBehaviour
 
     private void Start()
     {
-        scoresCounter = 100;
+        scoresCounter = 10000;
     }
     private void Update()
     {

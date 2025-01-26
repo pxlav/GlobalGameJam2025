@@ -7,7 +7,6 @@ public class GameplayStages : MonoBehaviour
     public int whichState; // 0 - main 1 - medium 2 - hard
     public GameObject[] statesObj; // -||-
     public BubbleManage bubbleManage;
-
     private void Start()
     {
         whichState = 0;
