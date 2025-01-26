@@ -13,19 +13,16 @@ public class GameplayStages : MonoBehaviour
         {
             statesObj[0].SetActive(true);
             statesObj[1].SetActive(false);
-            statesObj[2].SetActive(false);
         }
         if(whichState == 1)
         {
             statesObj[0].SetActive(false);
             statesObj[1].SetActive(true);
-            statesObj[2].SetActive(false);
         }
         if(whichState == 2)
         {
             statesObj[0].SetActive(false);
             statesObj[1].SetActive(false);
-            statesObj[2].SetActive(true);
         }
     }
 }

@@ -29,7 +29,7 @@ public class Bubble : MonoBehaviour
     private void Update()
     {
         this.transform.position = Vector3.MoveTowards(transform.position, targets.ElementAt(currentTarget).transform.position, speed);
-        targets.OrderBy(t => t.name).ToList();
+        //targets.OrderBy(t => t.name).ToList();
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
