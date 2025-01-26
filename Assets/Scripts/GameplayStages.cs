@@ -18,7 +18,7 @@ public class GameplayStages : MonoBehaviour
         {
             whichState = 0;
         }
-        if (bubbleManage.bubbleTimerMinus < 2 && bubbleManage.bubbleTimerMinus > 1f)
+        if (bubbleManage.bubbleTimerMinus < 2 && bubbleManage.bubbleTimerMinus > 1.5f)
         {
             whichState = 1;
         }
