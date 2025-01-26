@@ -77,6 +77,7 @@ public class MainMenu : MonoBehaviour
             menuObjs[2].SetActive(false);
             menuObjs[3].SetActive(false);
             menuObjs[4].SetActive(true);
+            gameObj.SetActive(false);
             endTimer -= Time.deltaTime;
             if(endTimer <= 0)
             {

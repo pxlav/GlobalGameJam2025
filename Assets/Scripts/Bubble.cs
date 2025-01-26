@@ -16,7 +16,7 @@ public class Bubble : MonoBehaviour
     public float slowTimer;
     private void Start()
     {
-        speed = 0.1f;
+        speed = 0.03f;
         targetsNumber = 30;
         targets.AddRange(GameObject.FindGameObjectsWithTag("Target"));
         spawnPlace = GameObject.FindGameObjectWithTag("Spawn");
@@ -37,11 +37,11 @@ public class Bubble : MonoBehaviour
         if (canSLow == true)
         {
             slowTimer -= Time.deltaTime;
-            speed = 0.01f;
+            speed = 0.007f;
             if (slowTimer <= 0)
             {
                 slowTimer = 3.0f;
-                speed = 0.1f;
+                speed = 0.03f;
                 canSLow = false;
             }
         }
