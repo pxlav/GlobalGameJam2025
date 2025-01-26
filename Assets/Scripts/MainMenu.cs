@@ -18,6 +18,10 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuStates = 3;
+        }
         if(menuStates == 0)
         {
             menuObjs[0].SetActive(true);

@@ -14,7 +14,6 @@ public class Bubble : MonoBehaviour
     public float lifeTime;
     public bool canSLow;
     public float slowTimer;
-    public AudioSource bubbleSound;
     private void Start()
     {
         speed = 0.1f;
@@ -25,7 +24,6 @@ public class Bubble : MonoBehaviour
         lifeTime = 150.0f;
         canSLow = false;
         slowTimer = 3.0f;
-        bubbleSound = GameObject.FindGameObjectWithTag("BubbleSound").GetComponent<AudioSource>();
     }
     private void Update()
     {
